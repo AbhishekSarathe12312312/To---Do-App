@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App with CAPTCHA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>📝 To-Do App with CAPTCHA</h1>
+
+    <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Enter Task" required>
+        <input type="text" id="descInput" placeholder="Enter Description">
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div id="captchaDiv" style="display:none;">
+        <p>Enter the CAPTCHA below:</p>
+        <canvas id="captchaCanvas" width="150" height="50"></canvas>
+        <input type="text" id="captchaInput" placeholder="Enter CAPTCHA">
+        <div>
+            <button id="verifyCaptcha">Verify CAPTCHA</button>
+            <button id="reloadCaptcha">🔄 Reload CAPTCHA</button>
+        </div>
+    </div>
+
+    <h3>📌 Task List</h3>
+    <ul id="taskList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
