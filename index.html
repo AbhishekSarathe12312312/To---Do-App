@@ -1,34 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do App with CAPTCHA</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>English Error Finder</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    .question-number {
+      color: #667eea;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .question-box {
+      background: #f5f7ff;
+      border-left: 5px solid #667eea;
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #667eea;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #667eea;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #5568d8;
+    }
+
+    #nextBtn {
+      display: none;
+      background: #28a745;
+    }
+
+    #nextBtn:hover {
+      background: #218838;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      display: none;
+    }
+
+    .correct {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .wrong {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .score {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 16px;
+      color: #555;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 20px;
+      }
+
+      .question-box {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <h1>📝 To-Do App with CAPTCHA</h1>
+  <div class="container">
 
-    <form id="taskForm">
-        <input type="text" id="taskInput" placeholder="Enter Task" required>
-        <input type="text" id="descInput" placeholder="Enter Description">
-        <button type="submit">Add Task</button>
-    </form>
+    <h1>English Error Finder</h1>
 
-    <div id="captchaDiv" style="display:none;">
-        <p>Enter the CAPTCHA below:</p>
-        <canvas id="captchaCanvas" width="150" height="50"></canvas>
-        <input type="text" id="captchaInput" placeholder="Enter CAPTCHA">
-        <div>
-            <button id="verifyCaptcha">Verify CAPTCHA</button>
-            <button id="reloadCaptcha">🔄 Reload CAPTCHA</button>
-        </div>
+    <p class="subtitle">
+      Find the incorrect word or type "no mistake"
+    </p>
+
+    <div class="question-number" id="questionNumber">
+      Question 1
     </div>
 
-    <h3>📌 Task List</h3>
-    <ul id="taskList"></ul>
+    <div class="question-box" id="question">
+      Loading question...
+    </div>
 
-    <script src="script.js"></script>
+    <label for="answer">
+      Enter the incorrect word:
+    </label>
+
+    <input
+      type="text"
+      id="answer"
+      placeholder='Example: gives or "no mistake"'
+    >
+
+    <button id="submitBtn" onclick="checkAnswer()">
+      Submit Answer
+    </button>
+
+    <div class="result" id="result"></div>
+
+    <button id="nextBtn" onclick="nextQuestion()">
+      Next Question
+    </button>
+
+    <div class="score">
+      Score: <span id="score">0</span> / <span id="total">0</span>
+    </div>
+
+  </div>
+
+
+  <script>
+
+    const questions = [
+
+      {
+        sentence: "My parents always gives me good advice.",
+        answer: "gives"
+      },
+
+      {
+        sentence: "I have known my best friend since childhood, and we still meet regularly whenever we both are free from our busy schedules.",
+        answer: "no mistake"
+      },
+
+      {
+        sentence: "She is very interested on learning new languages and often practices English by talking with people online.",
+        answer: "on"
+      },
+
+      {
+        sentence: "My brother usually tell me his problems whenever he feels confused about an important decision in his life.",
+        answer: "tell"
+      },
+
+      {
+        sentence: "Although she had very little time, she managed to complete all her work before the meeting started, and everyone appreciated her efforts that day.",
+        answer: "no mistake"
+      },
+
+      {
+        sentence: "He doesn't usually complain about his problems, but yesterday he told me that his colleagues was not treating him fairly at work.",
+        answer: "was"
+      },
+
+      {
+        sentence: "My sister is very good at drawing, but she sometimes become nervous when she has to show her artwork in front of many people.",
+        answer: "become"
+      },
+
+      {
+        sentence: "I have been living here since five years and have become familiar with almost everyone in my neighborhood.",
+        answer: "since"
+      },
+
+      {
+        sentence: "She discussed about her future plans with me during our conversation yesterday evening.",
+        answer: "about"
+      },
+
+      {
+        sentence: "When I reached home yesterday, my mother was preparing dinner while my father watched television and my younger brother was playing games.",
+        answer: "no mistake"
+      }
+
+    ];
+
+
+    let currentQuestion = 0;
+    let score = 0;
+    let totalQuestions = 0;
+
+
+    function loadQuestion() {
+
+      document.getElementById("question").innerText =
+        questions[currentQuestion].sentence;
+
+      document.getElementById("questionNumber").innerText =
+        "Question " + (currentQuestion + 1);
+
+      document.getElementById("answer").value = "";
+
+      document.getElementById("result").style.display = "none";
+
+      document.getElementById("nextBtn").style.display = "none";
+
+      document.getElementById("submitBtn").style.display = "block";
+
+      document.getElementById("answer").disabled = false;
+
+      document.getElementById("answer").focus();
+    }
+
+
+    function checkAnswer() {
+
+      const userAnswer =
+        document.getElementById("answer").value
+        .trim()
+        .toLowerCase();
+
+      const correctAnswer =
+        questions[currentQuestion].answer.toLowerCase();
+
+      const result =
+        document.getElementById("result");
+
+
+      if (userAnswer === "") {
+
+        result.innerText =
+          "Please enter your answer.";
+
+        result.className = "result wrong";
+
+        result.style.display = "block";
+
+        return;
+      }
+
+
+      totalQuestions++;
+
+      if (userAnswer === correctAnswer) {
+
+        score++;
+
+        result.innerText =
+          "Correct! ✓";
+
+        result.className =
+          "result correct";
+
+      } else {
+
+        if (correctAnswer === "no mistake") {
+
+          result.innerText =
+            'Incorrect. The correct answer was "No mistake".';
+
+        } else {
+
+          result.innerText =
+            'Incorrect. The wrong word was "' +
+            questions[currentQuestion].answer +
+            '".';
+        }
+
+        result.className =
+          "result wrong";
+      }
+
+
+      document.getElementById("score").innerText =
+        score;
+
+      document.getElementById("total").innerText =
+        totalQuestions;
+
+      result.style.display = "block";
+
+      document.getElementById("nextBtn").style.display =
+        "block";
+
+      document.getElementById("submitBtn").style.display =
+        "none";
+
+      document.getElementById("answer").disabled = true;
+    }
+
+
+    function nextQuestion() {
+
+      currentQuestion++;
+
+      if (currentQuestion >= questions.length) {
+
+        currentQuestion = 0;
+
+        alert(
+          "You completed all questions! Your score is " +
+          score +
+          " out of " +
+          totalQuestions
+        );
+      }
+
+      loadQuestion();
+    }
+
+
+    document
+      .getElementById("answer")
+      .addEventListener("keypress", function(event) {
+
+        if (event.key === "Enter") {
+
+          if (
+            document
+            .getElementById("submitBtn")
+            .style.display !== "none"
+          ) {
+
+            checkAnswer();
+          }
+        }
+      });
+
+
+    loadQuestion();
+
+  </script>
+
 </body>
 </html>
