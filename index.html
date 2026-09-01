@@ -194,57 +194,942 @@
 
     const questions = [
 
-      {
-        sentence: "My parents always gives me good advice.",
-        answer: "gives"
-      },
+  {
+    sentence: "My uncle often drive to work early in the morning because he prefers avoiding heavy traffic and reaching his office before everyone else arrives.",
+    answer: "drive"
+  },
 
-      {
-        sentence: "I have known my best friend since childhood, and we still meet regularly whenever we both are free from our busy schedules.",
-        answer: "no mistake"
-      },
+  {
+    sentence: "After waiting for nearly an hour, we finally received the information we needed and were able to continue our journey without facing any further problems.",
+    answer: "no mistake"
+  },
 
-      {
-        sentence: "She is very interested on learning new languages and often practices English by talking with people online.",
-        answer: "on"
-      },
+  {
+    sentence: "She has been working in this company for three years and recently received a promotion because of her excellent performance and dedication.",
+    answer: "no mistake"
+  },
 
-      {
-        sentence: "My brother usually tell me his problems whenever he feels confused about an important decision in his life.",
-        answer: "tell"
-      },
+  {
+    sentence: "Neither of my brothers like waking up early, so my mother has to remind them several times before they finally leave for school.",
+    answer: "like"
+  },
 
-      {
-        sentence: "Although she had very little time, she managed to complete all her work before the meeting started, and everyone appreciated her efforts that day.",
-        answer: "no mistake"
-      },
+  {
+    sentence: "I was surprised by his reaction because I never expected him to become so angry over such a small misunderstanding between us.",
+    answer: "no mistake"
+  },
 
-      {
-        sentence: "He doesn't usually complain about his problems, but yesterday he told me that his colleagues was not treating him fairly at work.",
-        answer: "was"
-      },
+  {
+    sentence: "The children was playing happily in the garden while their parents were sitting nearby and talking about their plans for the upcoming weekend.",
+    answer: "was"
+  },
 
-      {
-        sentence: "My sister is very good at drawing, but she sometimes become nervous when she has to show her artwork in front of many people.",
-        answer: "become"
-      },
+  {
+    sentence: "She asked me where was I going because she wanted to know whether I would return home before dinner that evening.",
+    answer: "was"
+  },
 
-      {
-        sentence: "I have been living here since five years and have become familiar with almost everyone in my neighborhood.",
-        answer: "since"
-      },
+  {
+    sentence: "My neighbor always speaks kindly to everyone and is willing to help whenever someone in the area faces an unexpected problem.",
+    answer: "no mistake"
+  },
 
-      {
-        sentence: "She discussed about her future plans with me during our conversation yesterday evening.",
-        answer: "about"
-      },
+  {
+    sentence: "He has never visited another country, but he hopes to travel abroad someday and experience different cultures during his future holidays.",
+    answer: "no mistake"
+  },
 
-      {
-        sentence: "When I reached home yesterday, my mother was preparing dinner while my father watched television and my younger brother was playing games.",
-        answer: "no mistake"
-      }
+  {
+    sentence: "The manager told the employees that everyone must completes their assigned tasks before leaving the office for the day.",
+    answer: "completes"
+  },
 
-    ];
+  {
+    sentence: "I am not used to wake up early on Sundays because I usually prefer spending the morning relaxing at home.",
+    answer: "wake"
+  },
+
+  {
+    sentence: "She was disappointed because her favorite shop had already closed before she reached there to buy the dress she wanted.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My younger cousin is taller than me, although he is only fifteen years old and still growing very quickly every year.",
+    answer: "me"
+  },
+
+  {
+    sentence: "We arrived at the station just in time and managed to catch the train before it left for our destination.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The doctor advised him to take his medicine regularly and avoid eating too much unhealthy food during his recovery period.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I have not seen her from last Monday, so I am wondering whether she is busy with something important these days.",
+    answer: "from"
+  },
+
+  {
+    sentence: "My father rarely watches television because he prefers reading newspapers and spending his free time discussing different topics with our family.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The teacher asked the students to submit their assignments by Friday, otherwise they would lose marks for submitting them late.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She told me that she is feeling much better after taking some rest and following the doctor's instructions carefully.",
+    answer: "is"
+  },
+
+  {
+    sentence: "There are too much people waiting outside the building because an important event is going to begin within the next hour.",
+    answer: "much"
+  },
+
+  {
+    sentence: "My friend was extremely nervous before his interview, but he answered every question confidently and impressed the people sitting in front of him.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The movie was so interesting that none of us wanted to leave the theater before watching the final scene completely.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She suggested to go somewhere quiet where we could sit comfortably and discuss our plans without being disturbed by other people.",
+    answer: "to"
+  },
+
+  {
+    sentence: "I usually keep a small notebook with me because I often get useful ideas that I do not want to forget later.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My brother and I has decided to start exercising regularly because we both want to become healthier and more active.",
+    answer: "has"
+  },
+
+  {
+    sentence: "The shopkeeper gave us a discount because we had purchased several items from his store during the same visit.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She was looking forward to meet her old classmates after many years and was excited about attending the reunion.",
+    answer: "meet"
+  },
+
+  {
+    sentence: "I do not know why he behaved so strangely yesterday because he is normally a very calm and friendly person.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "Every student were asked to bring their identification card before entering the examination hall for the important final test.",
+    answer: "were"
+  },
+
+  {
+    sentence: "My sister has already finished her homework, so now she is watching her favorite television program with our mother.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "He apologized for arriving late because his car suddenly stopped on the road and he had to wait for assistance.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I am responsible to completing this report before tomorrow, so I cannot join you for dinner this evening.",
+    answer: "to"
+  },
+
+  {
+    sentence: "The weather was beautiful yesterday, so we decided to spend the entire afternoon walking around the park and enjoying the fresh air.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She has less friends than her sister, but she believes that having a few trustworthy people is more important.",
+    answer: "less"
+  },
+
+  {
+    sentence: "My parents encouraged me to follow my interests and work hard instead of choosing a career only because other people recommended it.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The police officer asked us to wait there until someone came and explained what had happened near the main road.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "He was very tired, but he continued working because he wanted to finish the task before the deadline passed.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I prefer tea than coffee because it makes me feel relaxed, especially when I drink it during a quiet evening.",
+    answer: "than"
+  },
+
+  {
+    sentence: "My friend has a habit of checking his phone immediately after waking up, even before speaking to anyone in the morning.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The meeting was cancelled because several important members could not attend, so the manager decided to arrange it another day.",
+    answer: "on"
+  },
+
+  {
+    sentence: "She is one of the most hardworking student in our class and always completes her assignments before the deadline.",
+    answer: "student"
+  },
+
+  {
+    sentence: "I had already eaten dinner when my friend called and invited me to join him at a nearby restaurant.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The children were excited because their parents had promised to take them to the zoo during the upcoming holiday.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "He explained me the entire situation patiently because he knew that I had not understood what happened earlier.",
+    answer: "me"
+  },
+
+  {
+    sentence: "My mother asked me whether I had remembered to lock the door before leaving the house this morning.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "There is many reasons why people should learn new skills and continue improving themselves throughout their professional lives.",
+    answer: "is"
+  },
+
+  {
+    sentence: "She was sitting beside the window and reading a book when suddenly someone knocked loudly at the front door.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I could not understand his question clearly, so I politely asked him to repeat it one more time.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My friend is married since five years and currently lives with his family in a peaceful neighborhood.",
+    answer: "since"
+  },
+
+  {
+    sentence: "The teacher was happy because all the students had completed their projects and submitted them before the required deadline.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She did not knew anything about the problem until someone explained the entire situation to her later that evening.",
+    answer: "knew"
+  },
+
+  {
+    sentence: "My brother spends most of his free time playing football, listening to music, and talking with his friends online.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "We were waiting at the bus stop when it suddenly started raining heavily, so everyone quickly searched for shelter.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The manager was satisfied with my work and told me that I had done an excellent job on the project.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She is capable to solve difficult problems without asking for help because she always thinks carefully before making decisions.",
+    answer: "to"
+  },
+
+  {
+    sentence: "I wish I can speak English more confidently when I meet new people and have conversations with them.",
+    answer: "can"
+  },
+
+  {
+    sentence: "My father told me that honesty and patience are important qualities that can help a person earn respect from others.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The restaurant was crowded, but we were lucky enough to find a table near the window after waiting briefly.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She has written three emails yesterday, but she still needs to send one more message before finishing her work.",
+    answer: "has"
+  },
+
+  {
+    sentence: "My cousin speaks English very fluently because he has been practicing regularly and watching English movies for several years.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "He is good in solving technical problems and often helps his colleagues whenever they face difficulties at work.",
+    answer: "in"
+  },
+
+  {
+    sentence: "I was amazed at how quickly she completed the task because it normally takes other people much longer.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The students were discussing about the upcoming competition and planning how they could prepare themselves for performing better.",
+    answer: "about"
+  },
+
+  {
+    sentence: "My friend promised that he would call me after reaching home, but unfortunately I never received any call from him.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She is always careful while driving because she understands that even a small mistake can sometimes cause serious problems.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "Neither the teacher nor the students was prepared for the sudden change in the examination schedule announced yesterday.",
+    answer: "was"
+  },
+
+  {
+    sentence: "I have never tried this type of food before, but I am willing to taste it at least once.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My brother told me to not worry too much because he was confident that everything would eventually become normal again.",
+    answer: "to"
+  },
+
+  {
+    sentence: "The old man was walking slowly because his legs were hurting after standing for a long time at the station.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She bought a beautiful dress for the party and looked extremely happy when everyone complimented her appearance.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I am looking forward for meeting you again because our previous conversation was extremely interesting and enjoyable.",
+    answer: "for"
+  },
+
+  {
+    sentence: "The company is planning to hire more employees because the amount of work has increased significantly during recent months.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My parents does not allow me to return home late unless I inform them about my plans beforehand.",
+    answer: "does"
+  },
+
+  {
+    sentence: "She was angry with me because I forgot to inform her about the change in our meeting schedule.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I prefer working alone when I need to concentrate, although sometimes discussing ideas with others helps me think differently.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "He asked me that where I had kept his documents because he needed them before leaving for the office.",
+    answer: "that"
+  },
+
+  {
+    sentence: "My sister has been learning how to cook, and recently she prepared a delicious meal for the entire family.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The children enjoyed themselves during the picnic because the weather was pleasant and there were many interesting activities.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She is much more confident now than she was a year ago because she has practiced speaking regularly.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I was waiting my friend outside the cinema when he suddenly called and told me that he would arrive late.",
+    answer: "waiting"
+  },
+
+  {
+    sentence: "The teacher advised the students to read every question carefully before writing their answers in the examination.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My father has a strong belief that hard work and discipline can helps people achieve their goals.",
+    answer: "helps"
+  },
+
+  {
+    sentence: "She was not interested in watching the movie because she had already seen it several times before.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "There were very little chairs available, so some people had to stand throughout the entire meeting.",
+    answer: "little"
+  },
+
+  {
+    sentence: "I am accustomed to working under pressure because my previous job often required me to complete tasks within short deadlines.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My friend asked me if I could help him move some furniture because he was changing his apartment.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She has not finished her work yet, although she has been sitting at her desk since early morning.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The teacher said that practice makes a person perfect, so we should continue improving our skills every day.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I am worried about my brother because he has not returned home yet and nobody knows where he is.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "He is one of those people who always tries to help others whenever they are facing difficult situations.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My mother asked me why did I come home so late because she had been waiting for me.",
+    answer: "did"
+  },
+
+  {
+    sentence: "The employees were informed that the office would remain closed tomorrow due to an important maintenance issue.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She told me that she had been waiting for almost two hours before the doctor finally arrived.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I cannot understand why he is always complaining about everything instead of trying to find a practical solution.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The boy was punished because he had broke an important rule and refused to listen to the teacher.",
+    answer: "broke"
+  },
+
+  {
+    sentence: "My friend and I were planning a short trip, but we cancelled it because neither of us had enough time.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She speaks so confidently that many people assume she has been living abroad for several years.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I am familiar to this software because I used it regularly during my previous job at another company.",
+    answer: "to"
+  },
+
+  {
+    sentence: "The train had already left when we reached the station, so we had to wait for another one.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My cousin told me that he had seen a very interesting documentary about space exploration last weekend.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She insisted to paying the bill herself even though everyone else offered to contribute some money.",
+    answer: "to"
+  },
+
+  {
+    sentence: "I usually check my schedule before making plans because I do not want two important activities to happen together.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The teacher asked every students to remain silent until everyone had completed the examination and submitted their papers.",
+    answer: "students"
+  },
+
+  {
+    sentence: "My brother has always been interested in computers and enjoys learning about new technology whenever he gets free time.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She was too tired to continue working, so she decided to take a short break before starting again.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I have been waiting here for you since two hours, and I am beginning to wonder whether you forgot.",
+    answer: "since"
+  },
+
+  {
+    sentence: "The manager asked me to attend the meeting because he wanted to discuss an important change in our project.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "He has a good knowledge about computers and can solve most common technical problems without needing much assistance.",
+    answer: "about"
+  },
+
+  {
+    sentence: "My parents were proud of me when I successfully completed the project after working on it for several weeks.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She did not wanted to leave early because she was enjoying the conversation with her old friends.",
+    answer: "wanted"
+  },
+
+  {
+    sentence: "The shop was closed when we arrived, so we decided to return the following morning and buy everything.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I usually avoid arguing with people because I believe that calmly discussing a problem often produces better results.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My brother is responsible of managing the entire event, so he has been extremely busy for several days.",
+    answer: "of"
+  },
+
+  {
+    sentence: "The students were excited about their trip because it was the first time many of them were travelling together.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She asked me to give her an honest opinion about the design before she made any final changes.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I was shocked when I heard that he had resigned from his job without discussing his decision with anyone.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The news were surprising because nobody expected the company to announce such a major change so suddenly.",
+    answer: "were"
+  },
+
+  {
+    sentence: "My friend always reminds me about important dates because he knows that I sometimes forget birthdays and appointments.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She has been studying English since she was a child and can now communicate confidently with people from different countries.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I am thinking to buy a new phone because my current device has started causing several problems recently.",
+    answer: "to"
+  },
+
+  {
+    sentence: "The children were sleeping peacefully when their mother quietly entered the room to check whether they were comfortable.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "He told me that he has completed the task before the manager arrived at the office yesterday morning.",
+    answer: "has"
+  },
+
+  {
+    sentence: "My father prefers walking to nearby places instead of using the car because he believes regular exercise is important.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She was interested to know more about the opportunity, so she contacted the company and asked several questions.",
+    answer: "to"
+  },
+
+  {
+    sentence: "I cannot remember where I put my keys, although I clearly remember carrying them when I entered the house.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The manager told us that each employee are expected to follow the company rules and complete assigned responsibilities.",
+    answer: "are"
+  },
+
+  {
+    sentence: "My friend gave me some useful information about the course, which helped me decide whether I should apply.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She was busy preparing for her examination, so she politely refused when her friends invited her to the party.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I have never been so nervous before speaking in public, but after a few minutes I started feeling comfortable.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The teacher explained that success does not comes easily and requires patience, effort, and continuous improvement over time.",
+    answer: "comes"
+  },
+
+  {
+    sentence: "My brother asked me to lend him some money because he had forgotten his wallet at home.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She is always polite to people, regardless of whether they agree with her opinions or have completely different views.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I was unable to attend the meeting because I had already made another important appointment at the same time.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My parents wants me to focus on my career, but they also encourage me to enjoy life.",
+    answer: "wants"
+  },
+
+  {
+    sentence: "The hotel staff were very helpful and immediately answered all our questions whenever we needed information or assistance.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She has been waiting to hear from the company since she completed her interview several days ago.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I do not agree with everything he says, but I still respect his opinion and listen carefully.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The teacher asked me what was the reason for arriving late, so I explained the problem honestly.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My friend is very talented at singing and often performs during family events whenever everyone gathers together.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She was disappointed with herself because she knew that she could have performed much better during the competition.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I had hardly finished my breakfast when my friend arrived and asked me to come outside immediately.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The manager asked us to be carefully while handling the important documents because losing them could create serious problems.",
+    answer: "carefully"
+  },
+
+  {
+    sentence: "My brother has fewer patience than me when dealing with people who repeatedly ask the same questions.",
+    answer: "fewer"
+  },
+
+  {
+    sentence: "She explained everything clearly enough for everyone to understand, so nobody needed to ask any additional questions afterward.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I was interested in joining the course, but unfortunately all the available seats had already been filled.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The children promised their parents that they would clean their rooms before going outside to play.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My friend said that he will visit us next weekend if he manages to complete all his work.",
+    answer: "will"
+  },
+
+  {
+    sentence: "She is one of the few people who always remembers small details about others and makes them feel valued.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I did not understand the instructions properly, so I asked my colleague to explain them again.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The doctor told him that he should avoid to eat unhealthy food and exercise regularly for better health.",
+    answer: "to"
+  },
+
+  {
+    sentence: "My sister enjoys reading novels because they allow her to imagine different places, people, and situations.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "We were extremely happy because everything went according to our plan and nobody faced any unexpected difficulty.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The manager gave each employee a separate task and expected them to complete it before the deadline.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I have always believed that learning from mistakes is one of the best ways to improve yourself.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She asked me if I knew where could she find the documents that were missing from the office.",
+    answer: "could"
+  },
+
+  {
+    sentence: "My friend was upset because nobody had informed him about the meeting, so he arrived completely unprepared.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The students has been preparing for the competition for several weeks and are now feeling confident about performing.",
+    answer: "has"
+  },
+
+  {
+    sentence: "I usually listen to music while travelling because it helps me relax and makes long journeys feel shorter.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She has never complained about her difficult situation and always tries to remain positive despite facing challenges.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My brother asked me where had I bought my new shoes because he wanted to purchase similar ones.",
+    answer: "had"
+  },
+
+  {
+    sentence: "The company offered him a better position after noticing his hard work and consistent improvement over several months.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I was surprised that she remembered my birthday because we had not spoken to each other for months.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She is used to work late at night because that is when she feels most productive and focused.",
+    answer: "work"
+  },
+
+  {
+    sentence: "My father told me that I should always think carefully before making important decisions that could affect my future.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The teacher was explaining the lesson when suddenly the electricity went out and the classroom became completely dark.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I do not have many informations about the event, so I cannot tell you exactly what will happen.",
+    answer: "informations"
+  },
+
+  {
+    sentence: "She was happy because her efforts had finally produced good results after months of continuous practice.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My friend always says that confidence is important, but he sometimes becomes nervous when speaking before large groups.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The teacher asked us not make noise because another class was taking an important examination nearby.",
+    answer: "make"
+  },
+
+  {
+    sentence: "I have been trying to improve my communication skills by speaking English regularly and learning useful expressions.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She was unable to attend the event because she had promised her family that she would spend the evening with them.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My brother is interested on starting his own business, but he is still learning how to manage money properly.",
+    answer: "on"
+  },
+
+  {
+    sentence: "The students were asked to listen carefully because the teacher was about to explain an important concept.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I was glad to see that everyone had arrived on time and the meeting could begin without any delay.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She told me that she had visited the place several times and knew exactly how to reach there.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My friend suggested that we goes for a walk because sitting indoors all day was making us feel tired.",
+    answer: "goes"
+  },
+
+  {
+    sentence: "The manager appreciated my effort and encouraged me to continue working with the same level of dedication.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I was thinking about my future plans when suddenly my phone rang and interrupted my thoughts.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She has a strong ability of understanding complicated ideas quickly and explaining them in simple words to others.",
+    answer: "of"
+  },
+
+  {
+    sentence: "The children were excited to receive their gifts and immediately started opening them in front of everyone.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "My parents have always supported my decisions, even when they did not completely agree with the choices I made.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I was surprised because he spoke so confidently, even though he had only recently started learning English.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "The doctor advised her taking complete rest for a few days until she started feeling better again.",
+    answer: "taking"
+  },
+
+  {
+    sentence: "My friend has been living in another city for years, but we still remain in regular contact with each other.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "She was nervous before the interview, yet she managed to answer every question calmly and professionally.",
+    answer: "no mistake"
+  },
+
+  {
+    sentence: "I cannot decide between these two options because both of them seems equally useful for my future plans.",
+    answer: "seems"
+  },
+
+  {
+    sentence: "The teacher reminded us that success requires consistent effort and cannot usually be achieved without patience.",
+    answer: "no mistake"
+  }
+
+];
 
 
     let currentQuestion = 0;
